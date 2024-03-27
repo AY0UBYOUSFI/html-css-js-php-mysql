@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chronomètre</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		.chrono {
+			font-size: 48px;
+			font-weight: bold;
+			padding: 20px;
+			border: 2px solid #000;
+			background-color: #eee;
+			display: inline-block;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		.chrono-btn {
+			margin-top: 20px;
+			display: block;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="chrono">00:00:00</div>
+	<div class="chrono-btn">
+		<button onclick="start()">Démarrer</button>
+		<button onclick="stop()">Arrêter</button>
+		<button onclick="reset()">Réinitialiser</button>
+	</div>
+
+	<script>
+		var startTime;
+		var intervalId;
+		var elapsedTime = 0;
+
+		function start() {
+			startTime = Date.now() - elapsedTime;
+			intervalId = setInterval(updateTime, 10);
+		}
+
+		function stop() {
+			clearInterval(intervalId);
+			elapsedTime = Date.now() - startTime;
+		}
+
+		function reset() {
+			clearInterval(intervalId);
+			elapsedTime = 0;
+			updateDisplay();
+		}
+
+		function updateTime() {
+			elapsedTime = Date.now() - startTime;
+			updateDisplay();
+		}
+
+		function updateDisplay() {
+			var hours = Math.floor(elapsedTime / 3600000);
+			var minutes = Math.floor((elapsedTime - (hours * 3600000)) / 60000);
+			var seconds = Math.floor((elapsedTime - (hours * 3600000) - (minutes * 60000)) / 1000);
+			var milliseconds = Math.floor((elapsedTime % 1000) / 10);
+
+			var timeString = formatNumber(hours) + ":" + formatNumber(minutes) + ":" + formatNumber(seconds) + "[" + formatNumber(milliseconds) + "]";
+			document.querySelector(".chrono").textContent = timeString;
+		}
+
+		function formatNumber(number) {
+			if (number < 10) {
+				return "0" + number;
+			} else {
+				return number;
+			}
+		}
+	</script>
+</body>
+</html>

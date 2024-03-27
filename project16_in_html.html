@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tracé de fonction en JavaScript</title>
+</head>
+<body>
+  <label for="functionInput">Entrez une fonction mathématique en termes de x:</label>
+  <input type="text" id="functionInput">
+  <button onclick="plotFunction()">Tracer</button>
+  <br>
+  <canvas id="myCanvas"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.js"></script>
+  <script>
+    function plotFunction() {
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var width = canvas.width;
+      var height = canvas.height;
+      var expression = document.getElementById('functionInput').value;
+      var parser = math.parser();
+
+      context.clearRect(0, 0, width, height);
+      context.beginPath();
+      context.strokeStyle = 'blue';
+      context.lineWidth = 2;
+
+      for (var x = 0; x <= width; x += 1) {
+        var xScaled = (x / width) * 10 - 5; // scale x from [-5, 5]
+        parser.set('x', xScaled);
+        var y = parser.eval(expression);
+        var yScaled = height - (y + 5) / 10 * height; // scale y from [-5, 5] to canvas height
+        if (x === 0) {
+          context.moveTo(x, yScaled);
+        } else {
+          context.lineTo(x, yScaled);
+        }
+      }
+
+      context.stroke();
+    }
+  </script>
+</body>
+</html>

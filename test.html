@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-rlp2PB1daMu8dk5AhrqCTU30Fyslpl+KFX3BbY8fB3wY6xgLL8z2leL3ZfNd04f7feFsd2TcKEzx8yAuCj2nIw==" crossorigin="anonymous" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Website</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	<i class="fas fa-envelope"></i>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bootstrap Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+<a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+<a class="nav-link" href="#"><i class="fas fa-info-circle"></i> About</a>
+<a class="nav-link" href="#"><i class="fas fa-cogs"></i> Services</a>
+<a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="jumbotron text-center">
+        <h1>Welcome to Our Website</h1>
+        <p>Your message or tagline goes here.</p>
+        <br>
+        <a href="#" class="btn btn-primary">Learn More</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="container my-5">
+        <h2 class="text-center">About Us</h2>
+        <p>Your company's story and mission statement can be placed here.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container my-5">
+        <h2 class="text-center">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Service 1</h5>
+                        <p class="card-text">Description of Service 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Service 2</h5>
+                        <p class="card-text">Description of Service 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Service 3</h5>
+                        <p class="card-text">Description of Service 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container my-5">
+        <h2 class="text-center">Contact Us</h2>
+        <p>If you have any questions or inquiries, please don't hesitate to get in touch with us.</p>
+        <!-- Add a contact form or contact information here -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2023 Bootstrap Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Add Bootstrap JS and jQuery (required for some Bootstrap features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<style type="text/css">
+	/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font for the entire website */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #343a40; /* Dark background color */
+    color: #fff;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-item a {
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-item a:hover {
+    color: #ffc107; /* Yellow hover color */
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.jumbotron {
+    background-color: #343a40; /* Dark background color */
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    border-radius: 0;
+}
+
+.jumbotron h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.jumbotron p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.jumbotron a.btn-primary {
+    background-color: #ffc107;
+    color: #343a40;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.jumbotron a.btn-primary:hover {
+    background-color: #ffdb58; /* Yellow hover color */
+    transform: scale(1.05);
+}
+
+/* About and Services Sections */
+.container {
+    background-color: #fff; /* White background */
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Service Cards */
+.card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Footer Section */
+footer {
+    background-color: #343a40; /* Dark background color */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+<style>
+	/* Navigation links hover animation */
+.nav-item a {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-item a:hover {
+    color: #ffc107;
+    transform: scale(1.1);
+}
+/* Hero section animation */
+.jumbotron {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.jumbotron.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Footer animation */
+footer {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+footer.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+	</style>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+    const jumbotron = document.querySelector('.jumbotron');
+    jumbotron.classList.add('show');
+});
+
+</script>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+    const footer = document.querySelector('footer');
+    footer.classList.add('show');
+});
+
+</script>
+</html>

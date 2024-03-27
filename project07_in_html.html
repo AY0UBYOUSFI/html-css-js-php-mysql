@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toc</title>
+</head>
+<body>
+    <table id="all">
+        <tr><td id="c1" onclick="chang(1)"></td><td id="c2" onclick="chang(2)"></td><td id="c3" onclick="chang(3)"></td></tr>
+        <tr><td id="c4" onclick="chang(4)"></td><td id="c5" onclick="chang(5)"></td><td id="c6" onclick="chang(6)"></td></tr>
+        <tr><td id="c7" onclick="chang(7)"></td><td id="c8" onclick="chang(8)"></td><td id="c9" onclick="chang(9)"></td></tr>
+    </table>
+</body>
+<style>
+    tr,td{
+        width: 80px;
+        height: 90px;
+        font-size: 50px;
+        font-family: cursive;
+        padding-left: 55px;
+        border-radius: 20px;
+    }
+
+</style>
+<script>
+    function chang(ptr){
+        var col=document.getElementById('all').style.backgroundColor;
+
+        if(ptr==1){
+        document.getElementById('c1').style.backgroundColor='rgb(255, 0, 98)';
+        document.getElementById('c1').innerHTML='X';
+        }
+        else if(ptr == 2){
+        document.getElementById('c2').style.backgroundColor='blue';
+        document.getElementById('c2').innerHTML='O';
+        }
+        else if(ptr == 3){
+        document.getElementById('c3').style.backgroundColor='green';
+        document.getElementById('c3').innerHTML='O';
+        }
+        else if(ptr == 4){
+        document.getElementById('c4').style.backgroundColor='rgb(183, 0, 255)';
+        document.getElementById('c4').innerHTML='X';
+        }
+        else if(ptr == 5){
+        document.getElementById('c5').style.backgroundColor='rgb(0, 238, 255)';
+        document.getElementById('c5').innerHTML='X';
+        }
+        else if(ptr == 6){
+        document.getElementById('c6').style.backgroundColor='gray';
+        document.getElementById('c6').innerHTML='O';
+        }
+        else if(ptr == 7){
+        document.getElementById('c7').style.backgroundColor='rgb(238, 255, 0)';
+        document.getElementById('c7').innerHTML='O';
+        }
+        else if(ptr == 8){
+        document.getElementById('c8').style.backgroundColor='rgb(255, 136, 0)';
+        document.getElementById('c8').innerHTML='X';
+        }
+        else {
+        document.getElementById('c9').style.backgroundColor='rgb(0, 255, 55)';
+        document.getElementById('c9').innerHTML='X';
+        }
+    
+    
+    }
+</script>
+</html>

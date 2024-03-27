@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clc</title>
+</head>
+<body>
+<fieldset class="all">
+        <textarea id="ecran" value="0" ></textarea>
+        <input type="button" value="1" id="btn" onclick="aff(1)"><input type="button" value="2" id="btn" onclick="aff(2)"><input type="button" value="3" id="btn" onclick="aff(3)"><br>
+        <input type="button" value="4" id="btn" onclick="aff(4)"><input type="button" value="5" id="btn" onclick="aff(5)"><input type="button" value="6" id="btn" onclick="aff(6)"><br>
+        <input type="button" value="7" id="btn" onclick="aff(7)"><input type="button" value="8" id="btn" onclick="aff(8)"><input type="button" value="9" id="btn" onclick="aff(9)"><br>
+        <input type="button" value="*" id="btn" onclick="aff('*')"><input type="button" value="0" id="btn" onclick="aff(0)"><input type="button" value="#" id="btn" onclick="aff('#')"><br>
+        <input type="button" value="SMS" id="btn" onclick="aff('SMS')"><input type="button" value="TEL" id="btn" onclick="ver()"><input type="button" value="DEL" id="btn" onclick="del()"><br>
+</fieldset>
+
+<style>
+    .all{
+        width: 260px;
+        background-color: rgb(70, 69, 69);
+        border: double 1px black;
+    }
+    textarea{
+        width: 250px;
+        height: 40px;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+       background-color: rgb(84, 129, 58);
+        font-family: cursive;
+    }
+#btn{
+    height: 10px;
+    width: 70px;
+    padding: 20px;
+    padding-bottom: 35px;
+    padding-right: 20px;
+    margin: 8px;
+    font-size: 19px;
+    background-color: rgb(15, 15, 15);
+    border: solid 1px white;
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+    
+}
+#btn:hover{
+    background-color: rgb(255, 255, 255);
+    border: solid 1px rgb(255, 0, 76);
+    color: rgb(255, 0, 64);
+    cursor: pointer;
+}
+</style>
+
+<script>
+    function aff(som){
+        var data=document.getElementById('ecran').value;
+        data=data+som;
+        document.getElementById('ecran').innerHTML=data;
+    }
+    function ver(){
+        let ptr01=document.getElementById('ecran').value;
+        if(ptr01.length==10)
+        document.getElementById('ecran').innerHTML="LE NEMERO EST CORRECT";
+        else
+        document.getElementById('ecran').innerHTML="EREUR";
+    }
+    function del(){
+        document.getElementById('ecran').innerHTML="";
+    }
+</script>
+
+
+</body>
+</html>

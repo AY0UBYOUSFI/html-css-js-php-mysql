@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sing up</title>
+</head>
+<body>
+    <div class="formprincipale">
+           <form action="http://localhost/tp/inputpage.php" method="get">
+            <h1 style="font-size: 50px;background-color:yellow;color: black;position: fixed;">SING UP</h1>
+                 <fieldset id="all">
+                    <h3>name :</h3>
+                    <input type="text" name="username" id="username"><br>
+                    <h3>email :</h3>
+                    <input type="email" name="email" id="email"><br>
+                    <h3>password :</h3>
+                    <input type="password" name="password" id="password"><br>
+                    <h3>day :</h3>
+                    <input type="datetime" name="time" id="time"><br>
+                    <h3>tel :</h3>
+                    <input type="tel" name="tel" id="tel"><br>
+                    <h3>agree</h3>
+                    <input type="checkbox" name="chek" id="chek"><br>
+                    <input type="submit" value="GO" id="ptr"> 
+                    <br><h1><a href="C:\Users\PC-ELL\Desktop\R\dev_web\td\project19_in_html.html">back</a></h1>
+                </fieldset>
+           </form> 
+    </div>
+<style>
+            #ptr{
+            background-color: rgb(229, 255, 0);
+            color: white;
+        }
+        #ptr:hover{
+            background-color: rgb(255, 255, 255);
+            color: rgb(238, 255, 0);
+        }
+    ::-webkit-scrollbar{
+        background-color: yellow;
+        border-radius: 20px;
+        border: 1px black solid;
+    }
+    h1{
+        user-select: none;
+        border-top-right-radius: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+h3{
+    user-select: none;
+    font-family: cursive;
+    font-size: 40px;
+}
+input:hover{
+            width: 720px;
+            height: 60px;
+            transition: 100ms;
+            box-shadow: 0px 3px 3px rgb(36, 35, 35);
+           transition: 0.4s;
+        }
+        input{
+            border: 1px rgb(223, 216, 216) solid;
+            width: 900px;
+            height: 60px;
+            font-family: cursive;
+            font-size: 40px;
+            margin: 5px;
+            background-color: rgb(226, 223, 223);
+            border-radius: 10px;
+}
+.formprincipale{
+    text-align: center;
+    background-color:rgb(0, 0, 0);
+    color: rgb(251, 255, 0);
+    border: 1px white solid;
+}
+form{
+}
+
+
+</style>
+
+
+</body>
+</html>

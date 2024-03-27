@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculatrice Arithmétique</title>
+  </head>
+  <body>
+
+    <form>
+      <label for="nombre1">Nbr 1 :</label>
+      <input type="number" id="nombre1" name="nombre1">
+      <label for="operateur">Op :</label>
+      <select id="operateur" name="operateur">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+      <label for="nombre2">Nbr 2 :</label>
+      <input type="number" id="nombre2" name="nombre2">
+      <input type="button" value="Calculer" onclick="calculer()">
+    </form>
+    <h1 id="resultat"></h1>
+
+    <script>
+      function calculer() {
+        var nombre1 = parseFloat(document.getElementById("nombre1").value);
+        var operateur = document.getElementById("operateur").value;
+        var nombre2 = parseFloat(document.getElementById("nombre2").value);
+
+        var resultat;
+
+        if (operateur == "+") {
+          resultat = nombre1 + nombre2;
+        } else if (operateur == "-") {
+          resultat = nombre1 - nombre2;
+        } else if (operateur == "*") {
+          resultat = nombre1 * nombre2;
+        } else if (operateur == "/") {
+          resultat = nombre1 / nombre2;
+        }
+     else if (operateur == "%") {
+          resultat = nombre1 % nombre2;
+        }
+
+        document.getElementById("resultat").innerHTML = resultat;
+      }
+    </script>
+    <style>
+      input{
+        color: rgb(4, 0, 255);
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+      }
+    </style>
+  </body>
+</html>

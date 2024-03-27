@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background change</title>
+</head>
+<body>
+    <div id="all">
+     <h1>HISE PAGE IS FOR TO CHANGE THE COLOR</h1>
+     <br><br><br>
+     <input type="button" value="red" onclick="change()">
+     <input type="button" value="green" onclick="stop()">
+    </div>
+<script>
+    function stop(){
+        document.getElementById('all').style.backgroundColor='green';
+    }
+function change(){
+        document.getElementById('all').style.backgroundColor='red';
+    }       
+</script>
+</body>
+</html>

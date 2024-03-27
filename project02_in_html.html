@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AFF DE TRL</title>
+    <script>
+      function afficherTriangle() {
+        var hauteur = parseInt(document.getElementById("hauteur").value);
+        var largeur = hauteur*2;
+
+        var triangle = "";
+
+        for (var i = 1; i <= hauteur; i++) {
+          for (var j = 1; j <= largeur; j++) {
+            if (j <= (hauteur - i) || j > (hauteur + i - 1)) {
+              triangle += " ";
+            } else {
+              triangle += "*";
+            }
+          }
+          triangle += "\n";
+        }
+
+        document.getElementById("resultat").value = triangle;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>AFF TRL</h1>
+      <label for="hauteur">SIZE :</label>
+      <input type="number" id="hauteur" name="hauteur"><br>
+      <textarea id="resultat" rows="10" cols="50"></textarea>
+      <br>
+      <input id="ptr" type="button" value="Afficher le triangle" onclick="afficherTriangle()"><br>
+    <br><br>
+  <style>
+    @keyframes anime {
+      0%{
+        margin-top: 100px;
+        
+      }
+      100%{
+        margin-top: 90px;
+      }
+      
+      
+    }
+    #ptr{
+      background-color: black;
+      color: rgb(4, 0, 255);
+      box-shadow: blue 10px 10px 10px ;
+      height: 40px;
+      width: 200px;
+      font-size: 20px;
+      font-family: cursive;    
+      animation: anime 4s linear infinite; 
+      border-radius: 10px;  
+      border: solide 1px rgb(38, 38, 235);     
+    }
+  </style>
+  </body>
+</html>

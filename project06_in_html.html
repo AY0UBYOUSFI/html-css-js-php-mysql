@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table de multuplication</title>
+
+</head>
+<body>
+    <div id="all">
+    <h1>TABLE DE multuplication</h1>
+    <input type="number" id="nbr"><input type="button" value="SHOW " onclick="ptrpro()">
+    <br><br><br>
+    <h3 id="result"></h3>
+    </div>
+    <script>
+        function ptrpro(){
+            var i=0,data="";
+            var nbr01=document.getElementById('nbr').value;
+            do{
+            data+=nbr01+'*'+i+'='+nbr01*i+'<br>'; 
+            i++;
+            }while(i<=10);
+            document.getElementById('result').innerHTML=data;   
+    
+        }
+    </script>
+</body>
+</html>

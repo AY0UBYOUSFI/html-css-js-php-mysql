@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini project</title>
+</head>
+<body>
+<div class="bgglobal">
+    <fieldset class="all">
+<input type="text" id="ecran" placeholder="0">
+    <br>
+    <table id="allbtn">
+        <tr><td id="b1" onclick="show('(')">(</td><td id="b2" onclick="show(')')">)</td><td id="b3" onclick="database('mc')">mc</td><td id="b4" onclick="database('mp')">m+</td><td id="b5" onclick="database('mm')">m-</td><td id="b6" onclick="database('mr')">mr</td><td id="b7" onclick="delete_one()">DEL</td><td id="b8" onclick="toneg()">+/-</td><td id="b9" onclick="show('%')">%</td><td id="b10" onclick="show('/')">/</td></tr>
+        <tr><td id="b11">2<sup>nd</sup></td><td id="b12" onclick="pow23_clc(2)">x<sup>2</sup></td><td id="b13" onclick="pow23_clc(3)">x<sup>3</sup></td><td id="b14">x<sup>y</sup></td><td id="b15" onclick="pow23_clc(4)">e<sup>x</sup></td><td id="b16" onclick="pow23_clc(10)">10<sup>x</sup></td><td id="b17" onclick="show(7)">7</td><td id="b18" onclick="show(8)">8</td><td id="b19" onclick="show(9)">9</td><td id="b20" onclick="show('*')">X</td></tr>
+        <tr><td id="b21" onclick="clc_globale(31)">1/x</td><td id="b22" onclick="clc_globale(32)">2vx</td><td id="b23" onclick="clc_globale(33)">3vx</td><td id="b24" onclick="show('v')">yvx</td><td id="b26" onclick="clc_globale(35)">ln</td><td id="b27" onclick="clc_globale(36)">log<sub>10</sub></td><td id="b28" onclick="show(4)">4</td><td id="b29" onclick="show(5)">5</td><td id="b29" onclick="show(6)">6</td><td id="b30" onclick="show('-')">-</td></tr>
+        <tr><td id="b31" onclick="clc_globale(41)">x!</td><td id="b32" onclick="clc_globale(42)">sin</td><td id="b33" onclick="clc_globale(43)">cos</td><td id="b34" onclick="clc_globale(44)">tan</td><td id="b35" onclick="clc_globale(45)">e</td><td id="b36" onclick="clc_globale(46)">EE</td><td id="b37" onclick="show(1)">1</td><td id="b38" onclick="show(2)">2</td><td id="b39" onclick="show(3)">3</td><td id="b40" onclick="show('+')">+</td></tr>
+        <tr><td id="b41" onclick="MODE_CLC_F()"><p id="MODE_CLC_T" >mode</p></td><td id="b42" onclick="clc_globale(52)">sinh</td><td id="b43" onclick="clc_globale(53)">cosh</td><td id="b44" onclick="clc_globale(54)">tanh</td><td id="b45" onclick="clc_globale(55)">p</td><td id="b46" onclick="clc_globale(56)">Rand</td><td id="b47" colspan="2" onclick="show(0)">0</td><td id="b49" onclick="show('.')">,</td><td id="b50" onclick="RES()">=</td></tr>
+        <tr><td id="b51" onclick="clc_globale(61)">B2</td><td id="b52" onclick="clc_globale(62)">B8</td><td id="b53" onclick="clc_globale(63)">B10</td><td id="b54" onclick="clc_globale(64)">B16</td><td id="b55" onclick="tack_symbol(65)">OR</td><td id="b56" onclick="tack_symbol(66)">XOR</td><td id="b57" onclick="tack_symbol(67)">AND</td><td id="b58" onclick="return_not()">NOT</td><td id="b59" onclick="clc_globale(3000)">ATNG</td><td id="b60" >DGM</td></tr>
+       <tr><td colspan="2" onclick="clearall()">AC-CLEAR</td><td onclick="show('&')">' & '</td><td onclick="show('|')">' | '</td><td onclick="show('^')">' ^ '</td><td onclick="show('!')"> ' ! '</td><td colspan="3">creat by ayoub yousfi</td><td onclick="window.close()">exite</td></tr>
+</table>
+</fieldset>
+</div>
+
+<style>
+#MODE_CLC_T{
+   font-family: cursive;
+   font-size: 19px;
+   color: rgb(255, 255, 255);
+   text-decoration: double;
+}
+.all{
+        width: 1000px;
+        border-radius: 20px;
+        background-color: black;
+
+    }
+td{
+   width:100px ;
+   height:60px;
+   border-radius: 10px;
+   border: 2px solid rgb(0, 0, 0);
+   background-color: rgb(19, 18, 18);
+   font-family: cursive;
+   font-size: 34px;
+   color: rgb(255, 255, 255);
+   padding-left: 35px;
+   padding-top: 10px;
+   
+}
+#ecran{
+    height: 100px;
+    width: 1300px;
+    font-size: 70px;
+    border: solid 1px black;
+    background-color: black;
+    color: rgb(0, 238, 255);
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
+    margin: 20px;
+    font-family: cursive;
+    border-bottom: 3px solid white;
+}
+#b7,#b8,#b9{
+    background-color: gray;
+}
+#b10,#b20,#b30,#b40,#b50{
+    background-color: rgb(0, 247, 255);
+    color: black;
+}
+#b17,#b18,#b19,#b28,#b29,#b37,#b38,#b39,#b47,#b49{
+    background-color: rgb(34, 33, 33);
+}
+#b51,#b52,#b53,#b54,#b55,#b56,#b57,#b58,#b59,#b60{
+    background-color:rgb(24, 23, 23);
+}
+td:hover{
+    background-image: linear-gradient(rgb(24, 23, 23),rgb(46, 45, 45));
+    border-radius: 11px;
+    color: rgb(0, 238, 255);
+}
+</style>
+
+<script>
+    //variable of data sound and globale variable .....
+    var SOUND=new Audio();
+    SOUND.src= 'C:\SO.mp3';
+    var SOUND2=new Audio();
+    SOUND2.src= 'C:\SO2.mp3';
+    var SOUND3=new Audio();
+    SOUND3.src= 'C:\S3.mp3';
+    var data_var=Number(0);
+    document.getElementById('MODE_CLC_T').value='DEG';
+    var get_nbr1,get_nbr2,get_symbole='';
+   //-------------------------------------------------
+function tack_symbol(ptr08){
+    SOUND.play();
+    if(ptr08==65){
+        get_nbr1=document.getElementById('ecran').value;
+        get_symbole='or';
+        clearall();
+    }
+    else if(ptr08==66){
+        get_nbr1=document.getElementById('ecran').value;
+        get_symbole='xor';
+        clearall();
+    }
+    else{
+        get_nbr1=document.getElementById('ecran').value;
+        get_symbole='and';
+        clearall();
+    }
+} 
+function delete_one(){
+    SOUND.play();
+    let ptr07=new String;
+    ptr07=document.getElementById('ecran').value;
+    document.getElementById('ecran').value=ptr07.slice(0,-1);
+}
+function MODE_CLC_F(){
+    SOUND3.play();
+    if(document.getElementById('MODE_CLC_T').value=='RAD'){
+    document.getElementById('MODE_CLC_T').value='DEG';
+    document.getElementById('MODE_CLC_T').innerHTML='DEG';
+    document.getElementById('b41').style.background='rgb(0,0,20)';
+    document.getElementById('MODE_CLC_T').style.color='white';
+    }
+    else{
+    document.getElementById('MODE_CLC_T').value='RAD'; 
+    document.getElementById('MODE_CLC_T').innerHTML='RAD'; 
+    document.getElementById('b41').style.background='gray';
+    document.getElementById('MODE_CLC_T').style.color='black';
+    }
+
+}
+function clearall(){
+SOUND.play();
+document.getElementById('ecran').value=''; 
+}
+function show(ptr01) {
+    SOUND.play();
+var data=document.getElementById('ecran').value;
+data=data+ptr01;
+document.getElementById('ecran').value=data;
+}
+function toneg(){
+    SOUND.play();
+    var ptr3=document.getElementById('ecran').value;
+    document.getElementById('ecran').value=ptr3*(-1);
+}
+function return_not(){
+    var ptr09=document.getElementById('ecran').value;
+    document.getElementById('ecran').value=!ptr09;
+}
+function RES(){
+SOUND2.play();
+var ptr03=document.getElementById('ecran').value;
+get_nbr2=document.getElementById('ecran').value;
+if(get_symbole==''){
+try{
+document.getElementById('ecran').value=eval(ptr03);
+}
+catch{
+    document.getElementById('ecran').value="ereur";
+}
+}
+else{
+if(get_symbole=='or'){
+    document.getElementById('ecran').value=(get_nbr1|get_nbr2);
+    get_symbole='';
+}
+else if(get_symbole=='and'){
+    document.getElementById('ecran').value=(get_nbr1&get_nbr2);
+    get_symbole='';
+}
+else{
+    document.getElementById('ecran').value=(get_nbr1^get_nbr2);
+    get_symbole='';
+}
+}
+
+}
+function database(ptr04){
+    SOUND.play();
+  if(ptr04=='mp'){
+    data_var+=Number(document.getElementById('ecran').value);
+  }
+  else if(ptr04=='mm'){
+   data_var-=Number(document.getElementById('ecran').value);
+  }
+  else if(ptr04=='mr'){
+    document.getElementById('ecran').value=Number(data_var);
+  }
+  else
+  data_var=0;
+
+}
+function pow23_clc(ptr05){
+    var nbr01=document.getElementById('ecran').value;
+    if(ptr05==2)
+    document.getElementById('ecran').value=Math.pow(nbr01,2);
+    else if(ptr05==3)
+    document.getElementById('ecran').value=Math.pow(nbr01,3);
+    else if(ptr05==4)
+    document.getElementById('ecran').value=Math.exp(nbr01);
+    else if(ptr05==10)
+    document.getElementById('ecran').value=Math.pow(10,nbr01);
+    else
+    document.getElementById('ecran').value="ereur";
+}
+function clc_globale(ptr06){
+    SOUND.play();
+    var nbr02=document.getElementById('ecran').value;
+    if(ptr06==35){
+        document.getElementById('ecran').value=Math.log2(nbr02);
+    }
+    else if(ptr06==3000){
+        document.getElementById('ecran').value=Math.atan(nbr02);
+    }
+    else if(ptr06==31){
+        document.getElementById('ecran').value=1/Number(nbr02);
+    }
+    else if(ptr06==32){
+        document.getElementById('ecran').value=Math.sqrt(Number(nbr02));
+    }
+    else if(ptr06==33){
+        document.getElementById('ecran').value=Math.cbrt(Number(nbr02));
+    }
+    else if(ptr06==36){
+        if(document.getElementById('MODE_CLC_T').value=='DEG')
+        document.getElementById('ecran').value=Math.log10(nbr02);
+        else{
+            document.getElementById('ecran').value=Math.log10(nbr02*57.2958);
+        }
+    }
+    else if(ptr06==41){
+    var n02=1;
+    for(var i=1;i<=nbr02;i++)
+    n02=n02*i;
+    document.getElementById('ecran').value=n02;
+    }
+    else if(ptr06==42){
+        if(document.getElementById('MODE_CLC_T').value=='DEG')
+        document.getElementById('ecran').value=Math.sin(nbr02);
+        else{
+        document.getElementById('ecran').value=Math.sin(Number(nbr02*0.0174533));
+        }
+    }
+    else if(ptr06==43){
+        if(document.getElementById('MODE_CLC_T').value=='DEG')
+        document.getElementById('ecran').value=Math.cos(nbr02);
+        else{
+        document.getElementById('ecran').value=Math.cos(Number(nbr02*0.0174533));
+        }
+    }
+    else if(ptr06==44){
+        if(document.getElementById('MODE_CLC_T').value=='DEG')
+        document.getElementById('ecran').value=Math.tan(nbr02);
+        else{
+        document.getElementById('ecran').value=Math.tan(Number(nbr02*0.0174533));
+        }
+    }
+    else if(ptr06==45){
+        document.getElementById('ecran').value=Math.exp(1);
+    }
+    else if(ptr06==46){
+        document.getElementById('ecran').value=Math.pow(10,nbr02);
+    }
+    else if(ptr06==52){
+        document.getElementById('ecran').value=Math.sinh(nbr02);
+    }
+    else if(ptr06==53){
+        document.getElementById('ecran').value=Math.cosh(nbr02);
+    }
+    else if(ptr06==54){
+        document.getElementById('ecran').value=Math.tanh(nbr02);
+    }
+    else if(ptr06==55){
+        document.getElementById('ecran').value=Math.PI;
+    }
+    else if(ptr06==56){
+        document.getElementById('ecran').value=Math.random(100);
+    }
+    else if(ptr06==61){
+        document.getElementById('ecran').value=Number(nbr02).toString(2);
+    }
+    else if(ptr06==62){
+        document.getElementById('ecran').value=Number(nbr02).toString(8);
+    }
+    else if(ptr06==63){
+        document.getElementById('ecran').value=Number(nbr02).toString(10);
+    }
+    else if(ptr06==64){
+        document.getElementById('ecran').value=Number(nbr02).toString(16);
+    }
+    else
+        document.getElementById('ecran').value='syntax ereur';
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA BASE FORMULER</title>
+</head>
+<body>
+    <h1>MINECRAFT</h1><br>
+    <div class="data">
+        <img src="C:\off.jpeg" width="120px" height="120px">
+        <form action="http://localhost/tp/serch.php" method="get">
+            <input type="text" name="username" id="username" placeholder="Username ..."><br>
+            <input type="email" name="email" id="email" placeholder="email ..."><br>
+            <input type="password" name="password" id="password" placeholder=" password"><br>
+            <input type="submit" value="sing in" id="ptr"><br>
+            <a href="C:\Users\PC-ELL\Desktop\R\dev_web\td\project20_in_html.html">sing up</a>
+        </form>
+    </div>
+    <style>
+        #ptr{
+            background-color: rgb(255, 0, 85);
+            color: white;
+        }
+        #ptr:hover{
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 0, 64);
+        }
+        img:hover{
+            transform: rotate(360deg);
+            transition: 600ms;
+        }
+        h1{
+            text-align: center;
+            font-family: cursive;
+            cursor: grab;
+            user-select: none;
+            color: rgb(255, 255, 255);
+            opacity: 0.6;
+        }
+        input:hover{
+            width: 305px;
+            height: 45px;
+            transition: 100ms;
+            box-shadow: 0px 3px 3px rgb(37, 37, 37);
+        }
+        input{
+            user-select: none;
+            border: 1px rgb(223, 216, 216) solid;
+            width: 300px;
+            height: 40px;
+            font-family: cursive;
+            font-size: 20px;
+            margin: 5px;
+            background-color: rgb(226, 223, 223);
+            border-radius: 10px;
+        }
+
+ img{
+    user-select: none;
+  margin-top: 25px;
+  border-radius: 60px;
+  margin-bottom: 100px;
+ }
+ .data{
+    background-color: rgb(250, 250, 250);
+    margin-left: 490px;
+    text-align: center;
+    width:350px;
+    border: 1px rgb(216, 213, 213) solid;
+    border-radius: 30px;
+    height: 500px;
+    box-shadow: 0px 5px 10px rgba(54, 54, 54, 0.664);
+    animation: shadow  10s infinite;
+    opacity:5;
+    position:-ms-page;
+ }
+ a{
+    
+    font-family: cursive;
+    font-size: 20px;
+    color: rgb(255, 0, 76);
+ }
+ @keyframes shadow {
+    0%{
+        box-shadow: 0px 5px 10px rgba(255, 0, 140, 0.664); 
+    }
+    25%{
+        box-shadow: 0px 5px 10px rgba(140, 0, 255, 0.664); 
+    }
+    50%{
+        box-shadow: 0px 5px 10px rgba(0, 255, 255, 0.664); 
+    }
+    75%{
+        box-shadow: 0px 5px 10px rgba(94, 255, 0, 0.664); 
+    }
+    85%{
+        box-shadow: 0px 5px 10px rgba(255, 0, 0, 0.664); 
+    }
+    95%{
+        box-shadow: 0px 5px 10px rgba(0, 4, 255, 0.664); 
+    }
+    100%{
+        box-shadow: 0px 5px 10px rgba(251, 255, 0, 0.664); 
+    }
+
+ }
+ body{
+background-image: url('C:\on.jpg');
+ }
+        
+    </style>
+</body>
+</html>

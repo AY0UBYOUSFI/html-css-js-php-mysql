@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculatrice Scientifique</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <p id="result"></p>
+      </div>
+      <div class="buttons">
+        <button class="operator" id="clear">C</button>
+        <button class="operator" id="backspace">⌫</button>
+        <button class="operator" id="divide">/</button>
+        <button class="operator" id="multiply">*</button>
+        <button class="number" id="seven">7</button>
+        <button class="number" id="eight">8</button>
+        <button class="number" id="nine">9</button>
+        <button class="operator" id="subtract">-</button>
+        <button class="number" id="four">4</button>
+        <button class="number" id="five">5</button>
+        <button class="number" id="six">6</button>
+        <button class="operator" id="add">+</button>
+        <button class="number" id="one">1</button>
+        <button class="number" id="two">2</button>
+        <button class="number" id="three">3</button>
+        <button class="operator" id="equals">=</button>
+        <button class="number" id="zero">0</button>
+        <button class="number" id="decimal">.</button>
+        <button class="operator" id="pi">π</button>
+        <button class="operator" id="exp">e</button>
+        <button class="function" id="sin">sin</button>
+        <button class="function" id="cos">cos</button>
+        <button class="function" id="tan">tan</button>
+        <button class="function" id="sqrt">√</button>
+        <button class="function" id="pow">x^y</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.calculator {
+  background-color: #3d3d3d;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+  background-color: #f7f7f7;
+  color: #3d3d3d;
+  font-size: 2em;
+  text-align: right;
+  padding: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  padding: 10px;
+}
+
+button {
+  background-color: #4d4d4d;
+  color: #f7f7f7;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+
+    </style>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+</head>
+<body>
+    <input type="button" id="ptrpro" onkeyup="show()" >
+    <style>
+        @keyframes data{
+           0%{
+            margin-left: 10px;
+           }
+           5%{
+            margin-left: 40px;
+           }
+           10%{
+            margin-left: 80px;
+           }
+           15%{
+            margin-left: 120px;
+           }
+           20%{
+            margin-left: 160px;
+           }
+           25%{
+            margin-left: 200px;
+           }
+           30%{
+            margin-left: 240px;
+           }
+           35%{
+            margin-left: 280px;
+           }
+           40%{
+            margin-left: 320px;
+           }
+           45%{
+            margin-left: 360px;
+           }
+           50%{
+            margin-left: 400px;
+           }
+           55%{
+            margin-left: 440px;
+           }
+           60%{
+            margin-left: 480px;
+           }
+           65%{
+            margin-left: 520px;
+           }
+           70%{
+            margin-left: 560px;
+           }
+           75%{
+            margin-left: 600px;
+           }
+           80%{
+            margin-left: 640px;
+           }
+           85%{
+            margin-left: 680px;
+           }
+           90%{
+            margin-left: 720px;
+           }
+           100%{
+            margin-left: 760px;
+           }
+           
+        }
+
+        #ptrpro{
+            border: 2px solid black;
+            background-color: rgb(255, 0, 85);
+            border-radius: 20px;
+            width: 40px;
+            height: 40px;
+            margin-top: 310px;
+            animation: data 5s infinite;
+            z-index: 4;
+        }
+    </style>
+    <script>
+        function show(){
+            document.getElementById('ptrpro').style.marginTop='100px';
+            setTimeout('show2()',100);
+        }
+        function show2(){
+            document.getElementById('ptrpro').style.marginTop='200px';
+        }
+    </script>
+</body>
+</html>
